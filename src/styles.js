@@ -20,8 +20,14 @@ export const ProductWrapper = styled.div`
   }
 `;
 
-export const DeleteButtonStyled = styled.p`
-  color: ${(props) => props.theme.red};
+export const DeleteButtonStyled = styled.button`
+  color: ${(props) => props.theme.backgroundColor};
+  background-color: ${(props) => props.theme.mainColor};
+
+  &:hover {
+    color: ${(props) => props.theme.mainColor};
+    background-color: ${(props) => props.theme.backgroundColor};
+  }
 `;
 
 export const AddButtonStyled = styled.p`
@@ -36,6 +42,16 @@ export const SubmitButtonStyled = styled.button`
   &:hover {
     color: ${(props) => props.theme.mainColor};
     background-color: ${(props) => props.theme.backgroundColor};
+  }
+`;
+
+export const UpdateButtonStyled = styled.button`
+  color: maroon;
+  background-color: ${(props) => props.theme.pink};
+
+  &:hover {
+    color: ${(props) => props.theme.pink};
+    background-color: maroon;
   }
 `;
 

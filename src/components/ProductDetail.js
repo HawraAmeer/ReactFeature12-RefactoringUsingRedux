@@ -5,6 +5,7 @@ import DeleteButton from "./buttons/DeleteButton";
 // Styling
 import { DetailWrapper } from "../styles";
 import { useSelector } from "react-redux";
+import UpdateButton from "./buttons/UpdateButton";
 
 const ProductDetail = () => {
   const { productSlug } = useParams();
@@ -22,6 +23,7 @@ const ProductDetail = () => {
       <img src={product.image} alt={product.name} />
       <p>{product.description}</p>
       <p>{product.price} KD</p>
+      <UpdateButton productSlug={productSlug} />
       <DeleteButton productId={product.id} />
     </DetailWrapper>
   );

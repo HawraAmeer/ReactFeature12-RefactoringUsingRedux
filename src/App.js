@@ -37,10 +37,7 @@ function App() {
       <GlobalStyle />
       <NavBar currentTheme={currentTheme} toggleTheme={toggleTheme} />
       <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/cookies/new">
+        <Route path={["/products/new", "/products/:productSlug/edit"]}>
           <ProductForm />
         </Route>
         <Route path="/products/:productSlug">
@@ -48,6 +45,9 @@ function App() {
         </Route>
         <Route path="/products">
           <ProductList />
+        </Route>
+        <Route exact path="/">
+          <Home />
         </Route>
       </Switch>
     </ThemeProvider>
