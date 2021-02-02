@@ -24,6 +24,21 @@ export const DeleteButtonStyled = styled.p`
   color: ${(props) => props.theme.red};
 `;
 
+export const AddButtonStyled = styled.p`
+  color: ${(props) => props.theme.pink};
+  margin: 20px;
+`;
+
+export const SubmitButtonStyled = styled.button`
+  color: ${(props) => props.theme.backgroundColor};
+  background-color: ${(props) => props.theme.mainColor};
+
+  &:hover {
+    color: ${(props) => props.theme.mainColor};
+    background-color: ${(props) => props.theme.backgroundColor};
+  }
+`;
+
 export const Description = styled.h4`
   text-align: center;
 `;
